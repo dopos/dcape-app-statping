@@ -1,19 +1,19 @@
-# dcape-app-template
+# dcape-app-statping
 
 [![GitHub Release][1]][2] [![GitHub code size in bytes][3]]() [![GitHub license][4]][5]
 
-[1]: https://img.shields.io/github/release/dopos/dcape-app-template.svg
-[2]: https://github.com/dopos/dcape-app-template/releases
-[3]: https://img.shields.io/github/languages/code-size/dopos/dcape-app-template.svg
-[4]: https://img.shields.io/github/license/dopos/dcape-app-template.svg
+[1]: https://img.shields.io/github/release/dopos/dcape-app-statping.svg
+[2]: https://github.com/dopos/dcape-app-statping/releases
+[3]: https://img.shields.io/github/languages/code-size/dopos/dcape-app-statping.svg
+[4]: https://img.shields.io/github/license/dopos/dcape-app-statping.svg
 [5]: LICENSE
 
 [upstream_name](https://upstream_url) application package for [dcape](https://github.com/dopos/dcape).
 
 ## Upstream
 
-* Project: [upstream_name](https://upstream_url)
-* Docker: [template](https://hub.docker.com/r/template)
+* Project: [statping](https://github.com/statping/statping)
+* Docker: [statping](https://hub.docker.com/r/statping/statping)
 
 ## Requirements
 
@@ -38,8 +38,8 @@
 
 Run commands on deploy host with [dcape](https://github.com/dopos/dcape) installed:
 ```bash
-git clone --single-branch --depth 1 https://github.com/dopos/dcape-app-template.git
-cd dcape-app-template
+git clone --single-branch --depth 1 https://github.com/dopos/dcape-app-statping.git
+cd dcape-app-statping
 make config-if
 ... <edit .env.sample>
 make up

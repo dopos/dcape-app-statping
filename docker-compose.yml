@@ -4,6 +4,16 @@
 services:
   # This service will extend code from dcape
   app:
+    container_name: statup
+    volumes:
+      - ${APP_ROOT}:/app
     environment:
-      # Some var to keep YML struct
-      - DEBUG=yes
+      VIRTUAL_HOST: localhost
+      VIRTUAL_PORT: 8080
+      DB_CONN: postgres
+      DB_HOST: db
+      DB_USER: ${PGUSER}
+      DB_PASS: ${PGPASSWORD}
+      DB_DATABASE: ${PGDATABASE}
+      NAME: DCAPE Example
+      DESCRIPTION: This is a Statping Docker Compose instance

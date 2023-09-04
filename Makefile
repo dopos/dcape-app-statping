@@ -7,16 +7,16 @@ CFG                ?= .env
 CFG_BAK            ?= $(CFG).bak
 
 #- App name
-APP_NAME           ?= service-template
+APP_NAME           ?= statping
 
 #- Docker image name
-IMAGE              ?= ghcr.io/lekovr/service-template
+IMAGE              ?= statping/statping
 
 #- Docker image tag
-IMAGE_VER          ?= 0.1.0
+IMAGE_VER          ?= latest
 
 # If you need database, uncomment this var
-#USE_DB              = yes
+USE_DB              = yes
 
 # If you need user name and password, uncomment this var
 #ADD_USER            = yes
