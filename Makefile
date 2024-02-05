@@ -14,7 +14,7 @@ IMAGE              ?= ghcr.io/statping-ng/statping-ng
 #IMAGE              ?= statping/statping
 
 #- Docker image tag
-IMAGE_VER          ?= v0.91
+IMAGE_VER          ?= 0.91
 #IMAGE_VER          ?= v0.90.45
 
 #- app root
