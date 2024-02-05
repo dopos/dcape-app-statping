@@ -10,16 +10,18 @@ CFG_BAK            ?= $(CFG).bak
 APP_NAME           ?= statping
 
 #- Docker image name
-IMAGE              ?= statping/statping
+IMAGE              ?= ghcr.io/statping-ng/statping-ng
+#IMAGE              ?= statping/statping
 
 #- Docker image tag
-IMAGE_VER          ?= v0.90.45
+IMAGE_VER          ?= v0.91
+#IMAGE_VER          ?= v0.90.45
 
-# If you need database, uncomment this var
+#- app root
+APP_ROOT           ?= $(PWD)
+
 USE_DB              = yes
-
-# If you need user name and password, uncomment this var
-#ADD_USER            = yes
+ADD_USER            = yes
 
 # ------------------------------------------------------------------------------
 
@@ -29,14 +31,6 @@ export
 
 -include $(CFG)
 export
-
-# This content will be added to .env
-# define CONFIG_CUSTOM
-# # ------------------------------------------------------------------------------
-# # Sample config for .env
-# #SOME_VAR=value
-#
-# endef
 
 # ------------------------------------------------------------------------------
 # Find and include DCAPE_ROOT/Makefile
@@ -50,7 +44,3 @@ else
 endif
 
 # ------------------------------------------------------------------------------
-
-## Template support code, used once
-use-template:
-

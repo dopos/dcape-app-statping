@@ -4,12 +4,12 @@
 services:
   # This service will extend code from dcape
   app:
-    container_name: statup
     volumes:
       - ${APP_ROOT}/data:/app
     environment:
       VIRTUAL_HOST: localhost
       VIRTUAL_PORT: 8080
+      PORT: 8080
       DB_CONN: postgres
       DB_HOST: db
       DB_USER: ${PGUSER}
@@ -17,3 +17,10 @@ services:
       DB_DATABASE: ${PGDATABASE}
       NAME: DCAPE Example
       DESCRIPTION: This is a Statping Docker Compose instance
+      ADMIN_USER: ${USER_NAME}
+      ADMIN_PASSWORD: ${USER_PASS}
+    healthcheck:
+      test: curl -fSs http://127.0.0.1:8080/health | jq -r -e '.online==true' || exit 1
+      interval: 300s
+      timeout: 3s
+      retries: 3
