@@ -13,7 +13,7 @@ APP_NAME           ?= statping
 IMAGE              ?= statping/statping
 
 #- Docker image tag
-IMAGE_VER          ?= latest
+IMAGE_VER          ?= v0.90.45
 
 # If you need database, uncomment this var
 USE_DB              = yes

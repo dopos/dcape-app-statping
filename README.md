@@ -8,7 +8,7 @@
 [4]: https://img.shields.io/github/license/dopos/dcape-app-statping.svg
 [5]: LICENSE
 
-[upstream_name](https://upstream_url) application package for [dcape](https://github.com/dopos/dcape).
+[statping](https://github.com/statping/statping) application package for [dcape](https://github.com/dopos/dcape).
 
 ## Upstream
 
