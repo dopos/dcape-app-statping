@@ -20,7 +20,8 @@ services:
       ADMIN_USER: ${USER_NAME}
       ADMIN_PASSWORD: ${USER_PASS}
     healthcheck:
-      test: curl -fSs http://127.0.0.1:8080/health | jq -r -e '.online==true' || exit 1
-      interval: 300s
-      timeout: 3s
-      retries: 3
+      test: ["NONE"]
+      #test: curl -fSs http://127.0.0.1:8080/health | jq -r -e '.online==true' || exit 1
+      #interval: 300s
+      #timeout: 3s
+      #retries: 3
